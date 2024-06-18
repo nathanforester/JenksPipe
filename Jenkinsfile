@@ -9,14 +9,14 @@ pipeline {
         stage('Create File') {
             steps {
                 sh '''
-                      touch /home/ubuntu/example.txt
+                    sudo touch /home/ubuntu/example.txt
                    '''
             }
         }
         stage('Write to File') {
             steps {
                 sh '''
-                      echo "Hello" > /home/ubuntu/example.txt
+                    sudo echo "Hello" > /home/ubuntu/example.txt
                    '''
             }
         }
@@ -24,7 +24,7 @@ pipeline {
         stage('Delete file') {
             steps {
                 sh '''
-                      rm /home/ubuntu/example.txt
+                    sudo rm /home/ubuntu/example.txt
                    '''
             }
         }
